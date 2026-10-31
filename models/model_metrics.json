@@ -1,0 +1,131 @@
+{
+    "dataset": "EMSCAD-based Kaggle dataset",
+    "dataset_period": "2012-2014",
+    "features": [
+        "title",
+        "company_profile",
+        "description",
+        "requirements",
+        "benefits",
+        "location",
+        "department",
+        "employment_type",
+        "required_experience",
+        "required_education",
+        "industry",
+        "function",
+        "telecommuting",
+        "has_company_logo",
+        "has_questions"
+    ],
+    "random_state": 42,
+    "split": {
+        "training_rows": 10728,
+        "validation_rows": 3576,
+        "test_rows": 3576
+    },
+    "threshold_selection": {
+        "method": "maximum_validation_f2",
+        "selected_threshold": 0.44,
+        "validation_metrics": {
+            "threshold": 0.44,
+            "accuracy": 0.9843400447427293,
+            "balanced_accuracy": 0.9588530351491968,
+            "fraud_precision": 0.7853658536585366,
+            "fraud_recall": 0.930635838150289,
+            "fraud_f2": 0.8974358974358975,
+            "roc_auc": 0.9948311503450713,
+            "average_precision": 0.9377769978836186,
+            "confusion_matrix": [
+                [
+                    3359,
+                    44
+                ],
+                [
+                    12,
+                    161
+                ]
+            ],
+            "classification_report": {
+                "LEGITIMATE": {
+                    "precision": 0.996440225452388,
+                    "recall": 0.9870702321481046,
+                    "f1-score": 0.9917330971361087,
+                    "support": 3403.0
+                },
+                "FRAUDULENT": {
+                    "precision": 0.7853658536585366,
+                    "recall": 0.930635838150289,
+                    "f1-score": 0.8518518518518519,
+                    "support": 173.0
+                },
+                "accuracy": 0.9843400447427293,
+                "macro avg": {
+                    "precision": 0.8909030395554622,
+                    "recall": 0.9588530351491968,
+                    "f1-score": 0.9217924744939803,
+                    "support": 3576.0
+                },
+                "weighted avg": {
+                    "precision": 0.9862288534388712,
+                    "recall": 0.9843400447427293,
+                    "f1-score": 0.9849659116120102,
+                    "support": 3576.0
+                }
+            }
+        }
+    },
+    "final_test_metrics": {
+        "threshold": 0.44,
+        "accuracy": 0.9815436241610739,
+        "balanced_accuracy": 0.9518972548873061,
+        "fraud_precision": 0.7535545023696683,
+        "fraud_recall": 0.9190751445086706,
+        "fraud_f2": 0.8803986710963455,
+        "roc_auc": 0.9918789779164592,
+        "average_precision": 0.9446245580682627,
+        "confusion_matrix": [
+            [
+                3351,
+                52
+            ],
+            [
+                14,
+                159
+            ]
+        ],
+        "classification_report": {
+            "LEGITIMATE": {
+                "precision": 0.9958395245170877,
+                "recall": 0.9847193652659418,
+                "f1-score": 0.9902482269503546,
+                "support": 3403.0
+            },
+            "FRAUDULENT": {
+                "precision": 0.7535545023696683,
+                "recall": 0.9190751445086706,
+                "f1-score": 0.828125,
+                "support": 173.0
+            },
+            "accuracy": 0.9815436241610739,
+            "macro avg": {
+                "precision": 0.874697013443378,
+                "recall": 0.9518972548873061,
+                "f1-score": 0.9091866134751774,
+                "support": 3576.0
+            },
+            "weighted avg": {
+                "precision": 0.9841182412868015,
+                "recall": 0.9815436241610739,
+                "f1-score": 0.9824050171454298,
+                "support": 3576.0
+            }
+        }
+    },
+    "limitations": [
+        "Historical dataset from 2012-2014.",
+        "Random holdout does not establish modern scam performance.",
+        "Scores are not calibrated probabilities.",
+        "Synthetic API tests are not independent validation."
+    ]
+}

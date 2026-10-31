@@ -1,0 +1,5 @@
+{
+    "threshold": 0.44,
+    "selection_method": "validation_maximum_f2",
+    "beta": 2
+}
