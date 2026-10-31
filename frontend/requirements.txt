@@ -1,0 +1,5 @@
+# JobShield AI — Streamlit Community Cloud frontend dependencies
+# Streamlit Cloud installs from this file when the app file is frontend/app.py
+
+streamlit==1.66.1
+requests==2.34.2

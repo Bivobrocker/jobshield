@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: jobshield-ai-backend
+    runtime: python
+    pythonVersion: "3.11"
+    region: oregon
+
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT --workers 1
+
+    healthCheckPath: /health
+
+    envVars:
+      - key: FRONTEND_ORIGIN
+        sync: false
+        # Set this in the Render dashboard after Streamlit is deployed.
+        # Example: https://your-app-name.streamlit.app
+        # The backend defaults to "*" if unset (safe for initial deploy only).
+
+      - key: DATABASE_URL
+        value: sqlite:///./jobshield.db
+        # SQLite on Render ephemeral disk. History resets on restart/redeploy.
+        # To persist: replace with a PostgreSQL connection string.
+
+      - key: PYTHON_VERSION
+        value: "3.11"
